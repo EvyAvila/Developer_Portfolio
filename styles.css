@@ -4,6 +4,11 @@ html {
   background-color: rgb(255, 225, 230);
 }
 
+p, li {
+    font-size: 20px;
+}
+
+
 * {
   box-sizing: border-box;
 }
