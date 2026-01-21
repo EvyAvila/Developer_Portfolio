@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 225, 230);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.profile {
+    width: 50%;
+    height: 50%;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.left {
+    width: 25%;
+    background-color: rgb(250, 117, 161);
+}
+
+.right {
+    width: 75%;
+}
+
+.contentSize {
+    width: 30%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
