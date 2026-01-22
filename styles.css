@@ -16,6 +16,14 @@ a {
   box-sizing: border-box;
 }
 
+.smallText {
+    font-size: 14px;
+}
+
+.mediumText {
+    font-size: 30px;
+}
+
 .returnButton {
     background-color: rgb(255, 213, 255);
     border-color: purple;
@@ -39,13 +47,25 @@ a {
     width: 50%;
 }
 
+.short {
+    width: 45%;
+}
+
+.sidePanel {
+    background-color: rgb(250, 117, 161);
+}
+
 .left {
     width: 25%;
-    background-color: rgb(250, 117, 161);
 }
 
 .right {
     width: 75%;
+}
+
+.smallImage {
+    width: 60%;
+    height: 60%;
 }
 
 .contentSize {
