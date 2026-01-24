@@ -37,6 +37,9 @@
         </div>       
     </div>
     <h2>UI Elements:</h2>
+    <p>I was in charge of working on the UI elements and HUBs to be displayed and updated within each scene. For the menus, I used the Unity UI Toolkit, in which created a UI Manager script to handle swapping to the correct menus. For each UI asset, there were custom scripts to handle the events and functions. </p>
+    <p>The only issue I had was displaying two UI assets at the same time. When using the UI Toolkit, only one UIDocument can display an asset. To solve this, inside the UI Manager script I called the specific gameobjects that holds their own UIDocument component to be activated/deactivated when it was called. This was able to work as intended, but if there were more screens needed, it would have needed to be implemented manually. If I was able to redo this, I would have had the UIDocument asset be added on top within the stack.</p>
+    
     <h3>Menus</h3>
     <div class="scroll-container">
         <img class="smallerImage" 
@@ -61,13 +64,8 @@
         />
     </div>
 
-    
-    
     <h3>Script Snapshot:</h3>
-    <h4>UI Manager script</h4>
-    
-    
-
+    <p>UI Manager Script and file showcasing methods and fields. The last image is an example of how the different menus are created and assigned.<p>
     <div class="scroll-container">
         <img class="smallerImage " 
                 src="images/uiScripts/enumMenuStates.JPG" 
@@ -93,7 +91,12 @@
                 src="images/uiScripts/abstractBaseMenu.JPG" 
                 alt="An abstract base menu class that allows the scripts to have their respected values and methods to be" 
         />
+        <img class="smallerImage " 
+                src="images/uiScripts/MainMenuClassExample.JPG" 
+                alt="The main menu script that is a child of Base Menu and holds their own functions." 
+        />
     </div>
+    
 
     <br>
 </body>

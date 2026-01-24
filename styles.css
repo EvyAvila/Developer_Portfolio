@@ -112,4 +112,7 @@ a {
     .column {
         width: 100%;
     }
+    .scroll-container {
+        width: 100%;
+    }
 }
