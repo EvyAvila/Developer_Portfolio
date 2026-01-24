@@ -38,39 +38,63 @@
     </div>
     <h2>UI Elements:</h2>
     <h3>Menus</h3>
-    <div class="column">
-            <p>I was in charge of working on the UI elements and HUBs to be displayed and updated within each scene. For the menus, I used the Unity UI Toolkit, in which created a UI Manager script to handle swapping to the correct menus. For each UI asset, there were custom scripts to handle the events and functions. </p>
-            <p>The only issue I had was displaying two UI assets at the same time. When using the UI Toolkit, only one UIDocument can display an asset. To solve this, inside the UI Manager script I called the specific gameobjects that holds their own UIDocument component to be activated/deactivated when it was called. This was able to work as intended, but if there were more screens needed, it would have needed to be implemented manually. If I was able to redo this, I would have had the UIDocument asset be added on top within the stack.</p>
-        </div>
-    <div class="row">  
-        <div class="column left">
-            <p class="smallText">Start Menu: Title, Start Button, Quit Button</p>
-            <img class="contentImg" src="images/theLordsTrialsUITitle.jpg" alt="An image of a window with a lit candle. The UI displayed the game title: The Lord's Trials, in the top-middle screen. Underneath the title are yellow buttons with the options to start or quit the game." />
-        </div>
-        <div class="column left">
-            <p class="smallText">Pause Menu: Title, Resume Button, Quit Button, Mouse Sensitivity Slider</p>
-            <img class="contentImg" src="images/theLordsTrialsUIPauseMenu.JPG" alt="The pause menu during gameplay with the Paused title, two yellow buttons to resume or quit, and a mouse sensitvity slider." />
-        </div>
-        <div class="column left">
-            <p class="smallText">Ending Menu: Large text displaying result based on the ending, Return to home screen button</p>
-            <img class="contentImg" src="images/theLordsTrialsUIEndingExample.JPG" alt="A black screen that displays one of the bad ending title: You've awoken the souls, and a yellow button that will return the user to the main menu." />
-        </div>
-        <div class="column left">
-            <p class="smallText">Gameplay Menu: A rotating clock of the sun and moon that acts as a timer, Three rectangle jars to hold blood supply</p>
-            <img class="contentImg" src="images/theLordsTrialsUIGameplay.JPG" alt="A gameplay moment with the user looking at low jar of blood. There are two UI " />
-        </div>
-    </div>  
-    <div class="row">
-        <div class="column left">
-            <p class="smallText">Quit Menu: A title asking if the user is sure they want to quit, Yes Button, No Button</p>
-            <img class="contentImg" src="images/theLordsTrialsUIQuitMenu.JPG" alt="Similar to the start menu, it has the title asking the user if they are sure they want to quit the game with two yellow buttons with the response yes and no." />
-        </div>
+    <div class="scroll-container">
+        <img class="smallerImage" 
+            src="images/theLordsTrialsUITitle.jpg" 
+            alt="An image of a window with a lit candle. The UI displayed the game title: The Lord's Trials, in the top-middle screen. Underneath the title are yellow buttons with the options to start or quit the game." 
+        />
+        <img class="smallerImage" 
+            src="images/theLordsTrialsUIQuitMenu.JPG" 
+            alt="Similar to the start menu, it has the title asking the user if they are sure they want to quit the game with two yellow buttons with the response yes and no." 
+        />
+        <img class="smallerImage" 
+            src="images/theLordsTrialsUIPauseMenu.JPG" 
+            alt="The pause menu during gameplay with the Paused title, two yellow buttons to resume or quit, and a mouse sensitvity slider." 
+        />
+        <img class="smallerImage" 
+            src="images/theLordsTrialsUIEndingExample.JPG" 
+            alt="A black screen that displays one of the bad ending title: You've awoken the souls, and a yellow button that will return the user to the main menu."
+        />
+        <img class="smallerImage" 
+            src="images/theLordsTrialsUIGameplay.JPG" 
+            alt="A gameplay moment with the user looking at low jar of blood. There are two UI " 
+        />
     </div>
-    <h3>Related Scripts:</h3>
-    <a class="mediumText" target="_blank" href="https://github.com/EvyAvila/ChicaghoulGameJam25/blob/main/HalloweenJam25/Assets/Scripts/Managers/UIManager.cs">UI Manager</a> 
+
+    
+    
+    <h3>Script Snapshot:</h3>
+    <h4>UI Manager script</h4>
+    
+    
+
+    <div class="scroll-container">
+        <img class="smallerImage " 
+                src="images/uiScripts/enumMenuStates.JPG" 
+                alt="A line of code of the data type SceneScript that has three values: MainMenu, QuitMenu, and GameMenu." 
+        />
+        <img class="smallerImage " 
+                src="images/uiScripts/uiManagerFields.JPG" 
+                alt="A list of fields that were used for the UIManager scripts" 
+        />
+        <img class="smallerImage" 
+                src="images/uiScripts/uiManagerSwitchMenu.JPG" 
+                alt="A private void method that takes a Visual Tree Asset and Base Menu script parameters. Inside the method is the code that deactivates the current menu, switches, and activates the new menu." 
+        />
+        <img class="smallerImage" 
+                src="images/uiScripts/uiManagerLoadMenu.JPG" 
+                alt="A public void method that takes a Scene Script parameter. Inside the method runs the function to switch the menu. This allows other scripts to switch based on differnet locations." 
+        />
+        <img class="smallerImage" 
+                src="images/uiScripts/menuClassBase.JPG" 
+                alt="A Menus class that holds the Visual Tree Asset and base Menu Script." 
+        />
+         <img class="smallerImage" 
+                src="images/uiScripts/abstractBaseMenu.JPG" 
+                alt="An abstract base menu class that allows the scripts to have their respected values and methods to be" 
+        />
+    </div>
+
     <br>
-    <a class="mediumText" target="_blank" href="https://github.com/EvyAvila/ChicaghoulGameJam25/blob/main/HalloweenJam25/Assets/Scripts/UI/MainMenu.cs">Main Menu</a>  
-  
-</dl>
 </body>
 </html>

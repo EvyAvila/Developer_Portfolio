@@ -51,6 +51,11 @@ a {
     width: 45%;
 }
 
+.third {
+    width: 33.33%;
+    padding: 10px;
+}
+
 .sidePanel {
     background-color: rgb(250, 117, 161);
 }
@@ -81,6 +86,26 @@ a {
     content: "";
     display: table;
     clear: both;
+}
+
+.scroll-container {
+  background-color: rgb(250, 117, 161);
+  overflow: auto;
+  white-space: nowrap;
+  padding: 5px;
+}
+
+.scroll-item {
+  display: inline-block;
+  text-align: center;
+  margin-right: 12px;
+  vertical-align: top;
+}
+
+.smallerImage {
+    width: 25%;
+    height: 25%;
+
 }
 
 @media screen and (max-width: 600px) {
