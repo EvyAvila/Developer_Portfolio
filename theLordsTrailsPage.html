@@ -25,7 +25,10 @@
         <li>Git</li>
         <li>Adobe Photoshop</li>
     </ul>
-    
+    <h2>Content</h2>
+    <a href="#section1" class="returnButton">UI Elements</a>
+    <br>
+    <a href="#section2" class="returnButton">Puzzles</a>
 
     <div class="row">
         <div class="column half">
@@ -36,7 +39,7 @@
             <p>The theme for the game was haunted Castle, in which we had to incorporate two prompts. This game follows Dracula who was captured and weaken by The King in Yellow. Dracula must escape through the castle, but each room contains a puzzle. If he is able to solve them correctly, he will regain blood and unlock the door to venture forward. However, each room and overall game has a timer to complete. Depending on the amount of blood the player earns and the timer, will result on a specific ending.</p>
         </div>       
     </div>
-    <h2>UI Elements:</h2>
+    <h2 class="main" id="section1" >UI Elements:</h2>
     <p>I was in charge of working on the UI elements and HUBs to be displayed and updated within each scene. For the menus, I used the Unity UI Toolkit, in which created a UI Manager script to handle swapping to the correct menus. For each UI asset, there were custom scripts to handle the events and functions. </p>
     <p>The only issue I had was displaying two UI assets at the same time. When using the UI Toolkit, only one UIDocument can display an asset. To solve this, inside the UI Manager script I called the specific gameobjects that holds their own UIDocument component to be activated/deactivated when it was called. This was able to work as intended, but if there were more screens needed, it would have needed to be implemented manually. If I was able to redo this, I would have had the UIDocument asset be added on top within the stack.</p>
     
@@ -96,8 +99,31 @@
                 alt="The main menu script that is a child of Base Menu and holds their own functions." 
         />
     </div>
-    
-
     <br>
+    <h2 class="main" id="section2" > Puzzles:</h2>
+    <p>There was a total of five puzzles needed for each room, and I was in charge of implemented two of them. The process involved creating a prototype, iterating, testing, and finally polishing by replacing assests for the final version.</p>
+    <h3>Potion Order </h3>
+    <p>The following list is the procedure to achieve the mechanic. </p>
+    <ol>
+        <li>Create a liquid shader for the potion.</li>
+            <dd>This allows any liquid inside a bottle to be adjusted from the amount or movement. This becomes beneficial to follow the shape of the container</dd>
+        <br>
+        <li>Developed scritable objects to represent potion information and assign the values to the gameObjects</li>
+        <br>
+        <li>Placed a turning object to hold the potions and rotate based on input.</li>
+            <dd>For initial testing, I used UI buttons and assigned the events in the inspector. </dd>
+        <br>
+        <li>Inserted physical buttons to rotate the potions placements.</li>
+        <br>
+        <li>Placed a couldron pot that reads which potion is above it.</li>
+            <dd>This uses a raycast facing upwards to detect when a potion enters the line.</dd>
+        <br>
+        <li>Created a button for the potion to pour the liquid using a particle system.</li>
+            <dd>The particle system was adjusted from size, color, and placement that is triggered from the button.</dd>
+        <br>
+        <li>Implemented a randomize win condition for the correct order. Which, if the player enters te order incorrecntly, the order is wped for the player to try again.</li>
+            <dd>This allowed each player and each run to have a different combination. Ensuring it's not the same or static requirement each time.</dd>
+            <dd>Regarding the order, it automatically resets after all potions have been submitted. However, there is not cue for the player to see if the order was poured correctly or not. The only way to tell is if the player selects the blood container. If I was given more time, I would have added visual and audio cue for win and fail results. </dd>
+    </ol>
 </body>
 </html>

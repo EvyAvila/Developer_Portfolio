@@ -2,6 +2,7 @@ html {
   height: 100%;
   width: 100%;
   background-color: rgb(255, 225, 230);
+   scroll-behavior: smooth;
 }
 
 p, li {
@@ -106,6 +107,14 @@ a {
     width: 25%;
     height: 25%;
 
+}
+
+#section1 {
+    background-color: transparent;
+}
+
+#section2 {
+    background-color: transparent;
 }
 
 @media screen and (max-width: 600px) {
