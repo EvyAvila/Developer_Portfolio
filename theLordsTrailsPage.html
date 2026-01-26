@@ -4,42 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sections.css">
     <title>The Lord's Trials</title>
 </head>
-<body>
+<body class="bodyCenter">
     <button class="returnButton" type="button">
         <a href="index.html" >Return</a> 
     </button>
     
     <h1>The Lord's Trials</h1>
     <p>The Lord's Trials is an escape room style game created within the span of 3 weeks with a group of 2 members. It was a submission project for the <a href="https://itch.io/jam/chicaghoul-2025">Chicaghoul Game Jam of 2025,</a> hosted by <a href="https://www.indiecitygames.org/">ICG</a> and <a href="https://nightcity.games/">Night City</a>. </p>
-    <p>Available on <a href="https://celestialqueen1.itch.io/the-lords-trials">Itch.io</a>.</p>
-    
-    <h2>Role:</h2>
-    <p>Programmer & Game Designer</p>
-    <p>I was in charge of the project management, implementating functions and interactions, and UI elements.</p>
-    <h2>Tools used during production:</h2>
-    <ul>
-        <li>Unity</li>
-        <li>Visual Studio</li>
-        <li>Git</li>
-        <li>Adobe Photoshop</li>
-    </ul>
-    <h2>Content</h2>
-    <a href="#section1" class="returnButton">UI Elements</a>
+    <p>Available on <a href="https://celestialqueen1.itch.io/the-lords-trials" target="_blank">Itch.io</a>.</p>
+
+    <h2>Table of Contents</h2>
+    <a href="#Section1" class="returnButton">Role & Tools</a>
     <br>
-    <a href="#section2" class="returnButton">Puzzles</a>
+    <a href="#Section2" class="returnButton">UI Elements</a>
+    <br>
+    <a href="#Section3" class="returnButton">Puzzles</a>
+    <br>
+    <br>
 
     <div class="row">
-        <div class="column half">
+        <div class="column right">
             <p>Gameplay:</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/0EYbYPMhmsY?si=Gw1k7L1nkrAnamq3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div class="column half">
+        <div class="column right">
             <p>The theme for the game was haunted Castle, in which we had to incorporate two prompts. This game follows Dracula who was captured and weaken by The King in Yellow. Dracula must escape through the castle, but each room contains a puzzle. If he is able to solve them correctly, he will regain blood and unlock the door to venture forward. However, each room and overall game has a timer to complete. Depending on the amount of blood the player earns and the timer, will result on a specific ending.</p>
         </div>       
     </div>
-    <h2 class="main" id="section1" >UI Elements:</h2>
+    
+    
+    <div class="row" id="Section1">
+        <div class="column half">
+            <h2>Role:</h2>
+            <p>Programmer & Game Designer</p>
+            <p>I was in charge of the project management, implementating functions and interactions, and UI elements.</p>
+        </div>
+        <div class="column half">
+            <h2>Tools used during production:</h2>
+            <ul>
+                <li>Unity</li>
+                <li>Visual Studio</li>
+                <li>Git</li>
+                <li>Adobe Photoshop</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h2 class="main" id="Section2" >UI Elements:</h2>
     <p>I was in charge of working on the UI elements and HUBs to be displayed and updated within each scene. For the menus, I used the Unity UI Toolkit, in which created a UI Manager script to handle swapping to the correct menus. For each UI asset, there were custom scripts to handle the events and functions. </p>
     <p>The only issue I had was displaying two UI assets at the same time. When using the UI Toolkit, only one UIDocument can display an asset. To solve this, inside the UI Manager script I called the specific gameobjects that holds their own UIDocument component to be activated/deactivated when it was called. This was able to work as intended, but if there were more screens needed, it would have needed to be implemented manually. If I was able to redo this, I would have had the UIDocument asset be added on top within the stack.</p>
     
@@ -68,23 +82,16 @@
     </div>
 
     <h3>Script Snapshot:</h3>
-    <p>UI Manager Script and file showcasing methods and fields. The last image is an example of how the different menus are created and assigned.<p>
+    <p>Contains UI Manager script, Menus class, BaseMenu Abstract class, and a child class example using the MainMenu script.<p>
     <div class="scroll-container">
-        <img class="smallerImage " 
-                src="images/uiScripts/enumMenuStates.JPG" 
-                alt="A line of code of the data type SceneScript that has three values: MainMenu, QuitMenu, and GameMenu." 
-        />
-        <img class="smallerImage " 
-                src="images/uiScripts/uiManagerFields.JPG" 
-                alt="A list of fields that were used for the UIManager scripts" 
+        
+        <img class="smallerImage" 
+                src="images/uiScripts/uiManager1.JPG" 
+                alt="The first part of the UI manager script with the fields, enum, and start method." 
         />
         <img class="smallerImage" 
-                src="images/uiScripts/uiManagerSwitchMenu.JPG" 
-                alt="A private void method that takes a Visual Tree Asset and Base Menu script parameters. Inside the method is the code that deactivates the current menu, switches, and activates the new menu." 
-        />
-        <img class="smallerImage" 
-                src="images/uiScripts/uiManagerLoadMenu.JPG" 
-                alt="A public void method that takes a Scene Script parameter. Inside the method runs the function to switch the menu. This allows other scripts to switch based on differnet locations." 
+                src="images/uiScripts/uiManager2.JPG" 
+                alt="The second part of the UI manager script with the methods such as the SwitchUIMenu, LoadNextMenu, DisplayPauseMenu, and DisplayEndingMenu." 
         />
         <img class="smallerImage" 
                 src="images/uiScripts/menuClassBase.JPG" 
@@ -100,7 +107,7 @@
         />
     </div>
     <br>
-    <h2 class="main" id="section2" > Puzzles:</h2>
+    <h2 class="main" id="Section3" > Puzzles:</h2>
     <p>There was a total of five puzzles needed for each room, and I was in charge of implemented two of them. The process involved creating a prototype, iterating, testing, and finally polishing by replacing assests for the final version.</p>
     <h3>Potion Order </h3>
     <p>The following list is the procedure to achieve the mechanic. </p>
@@ -125,6 +132,68 @@
             <dd>This allowed each player and each run to have a different combination. Ensuring it's not the same or static requirement each time.</dd>
             <dd>Regarding the order, it automatically resets after all potions have been submitted. However, there is not cue for the player to see if the order was poured correctly or not. The only way to tell is if the player selects the blood container. If I was given more time, I would have added visual and audio cue for win and fail results. </dd>
     </ol>
-    <p>Left off here.</p>
+    <p>Progress from left to right: Prototype version 1, Prototype version 2, Finalized, In Game</p>
+    <div class="scroll-container">
+        
+        <img class="smallerImage" 
+                src="images/puzzles/potionV1.jpg" 
+                alt="" 
+        />
+        <img class="smallerImage" 
+                src="images/puzzles/potionV2.jpg" 
+                alt="" 
+        />
+        <img class="smallerImage" 
+                src="images/puzzles/potionV3.jpg" 
+                alt="" 
+        />
+         <img class="smallerImage" 
+                src="images/puzzles/potionV4.jpg" 
+                alt="" 
+        />
+    </div>
+    
+    <h3>Basket Scale Container </h3>
+    <p>The following list is the procedure to achieve the mechanic. </p>
+    <ol>
+        <li>Create a basket container for objects to be placed.</li>
+            <dd>I made a custom protoype box using ProBuilder.</dd>
+        <br>
+        <li>Assigned items to represent weight and value: rich or poor.</li>
+            <dd>Similar to the potion puzzle, only the specific type is allowed as the correct answer. Additionally, it aligns with the castle and king only allowing rich offerings.</dd>
+        <br>
+        <li>Developed a function for the container to travel downward if an object is placed inside.</li>
+            <dd>This was a fun way to have the puzzle be updated based on the player's input. It also acted as a tracker for progress since it would only go down for three items.</dd>
+        <li>Assigned three win conditions of rich items to be required</li>
+        <li>Set win/lose condition actions.</li>
+            <dd>If the player inserts the incorrect items, the basket dumps out everything and returns back to the original Y position. </dd>
+            <dd>If the player inserts the correct items, the basket is covered so no more items can be inserted. Additionally, the objects are disabled. </dd>
+    </ol>
+
+    <p>Progress from left to right: Prototype, Finalized, In Game</p>
+    <div class="scroll-container">
+        
+        <img class="smallerImage" 
+                src="images/puzzles/basketV1.jpg" 
+                alt="" 
+        />
+        <img 
+                src="images/puzzles/basketV2.jpg" 
+                alt="" 
+                width="70%"
+                height="70%"
+        />
+        <img
+                src="images/puzzles/basketV3.jpg" 
+                alt="" 
+                width="70%"
+                height="70%"
+        />
+    </div>
+
+    <br>
+    <button class="returnButton" type="button">
+        <a href="index.html" >Return</a> 
+    </button>
 </body>
 </html>
