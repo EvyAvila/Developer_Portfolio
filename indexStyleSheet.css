@@ -5,6 +5,35 @@ html {
 }
 
 .centerContent {
-    width: 80%;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: blue; /*Replace with background img*/
+    margin: auto 20px auto 20px;
+    display: inline-block;
+}
+
+.circleBorder {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin: -10px 0px 0px -10px;
+    outline-color: pink;
+    transition: 1s;
+}
+
+.circleBorder:hover {
+    outline-width: 10px;
+    outline-style: solid;
+}
+
+div > p {
+    text-align: center;
+}
+
