@@ -39,9 +39,18 @@ button {
 .gridContainer {
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
+    max-width: 100%;
+    margin: 0 auto;
    
 }
 
 .column {
     min-width: 0; 
+}
+
+@media (max-width: 600px) {
+  .gridContainer {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
 }
