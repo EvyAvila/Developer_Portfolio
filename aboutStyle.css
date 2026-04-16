@@ -1,0 +1,47 @@
+html {
+    background-color: rgb(130, 130, 228)
+}
+
+.centered-image {
+    border-radius: 50%;
+    width: auto;
+    height: 200px;
+    display: block;
+    margin: 10px auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+p {
+    text-indent: 25px;
+    font-size: 35px;
+}
+
+button {
+   font-size: 20px;
+   padding: 20px 20px;
+}
+
+.gap {
+    margin: 20px 20px;
+}
+
+.containerBackground {
+    background-color: white;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+   
+}
+
+.column {
+    min-width: 0; 
+}
