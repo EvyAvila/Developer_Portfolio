@@ -8,20 +8,216 @@
         <title>Title</title>
     </head>
     <body>
-        <h1>The Lord's Trials</h1>
+        <h1 id="top">The Lord's Trials</h1>
         <div class="gridContainer">
-            <div class="column positionSticky">
-                <button>Left</button>
+            <div class="column">
+                <button class="leftButton">Left</button>
+            </div>
+            <div class="column "></div>
+            <div class="column ">
+                <button class="rightButton">Right</button>
+            </div>
+        </div>
+        
+
+        <div class="gridContainer">
+            <div class="column">         
             </div>
 
             <div class="column containerBackground">
-                <p>Content here</p>
+                <h3>An escape room style game made in Unity.</h3>
+                
+                
+               
+                <div class="flexCenterContainer">
+                     <div class="halfWidth">
+                    <iframe 
+                    src="https://www.youtube.com/embed/0EYbYPMhmsY?si=Gw1k7L1nkrAnamq3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;  web-share; compute-pressure" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+                
+                </div>
+                <div class="halfWidth">
+                    <table>
+                        <tr>
+                            <td>📋</td>
+                            <td>Role</td>
+                            <td>Programmer</td>
+                        </tr>
+                        <tr>
+                            <td>⌚</td>
+                            <td>Duration</td>
+                            <td>3 Weeks</td>
+                        </tr>
+                        <tr>
+                            <td>👩‍💻</td>
+                            <td>Team Size</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>⚙</td>
+                            <td>Tools</td>
+                            <td>Unity <br>
+                                Visual Studio <br>
+                                Git <br>
+                                Adobe Photoshop</td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                </div>
+                <hr>
+                <h3>Overview</h3>
+                <p> This project was a submission for the Indie City Games Chicaghoul 2025 game jam. The following was created with the theme of a haunted castle and The Yellow King prompt. For this project I designed, collaborated, programmed, and delegated tasks to ensure the game met the required specifications and was completed within the allotted time.</p>
+                
+                <hr>
+                <h3>Goal</h3>
+                <p>Since this was my second participation in a game jam, I aimed to improve upon my previous experience and deliver a more polished and engaging product. For this, we aimed for an ambitious scope while maintaining a focus on gameplay and player experience.</p>
+                
+                <hr>
+                <h3>Task Responsibilities</h3>
+                <ul>
+                    <li>
+                        Designed and implemented UI menus using Unity's UI Toolkit. A total of 5 menu screens were created. Along with creating a UI Management script to allow for dynamic UI updates.
+                        <!-- <ul>
+                            <li>Main: containing the game title and interactive buttons to start and exit the game.</li>
+                            <li>Quit: A title asking if the player wants to quit with buttons options displaying yes and no.</li>
+                            <li>Paused: Containing a title, two buttons to quite or resume, and a slider for the mouse sensitivity.</li>
+                            <li>Ending: Displays a specific text that is based on set conditions, which includes the end state.</li>
+                            <li>Gameplay: A clock that rotates from the moon to the sun on the left side. The right side has three containers or bars that fill up in the color red to represent the blood.</li>
+                        </ul> -->
+                    </li>
+                    <li>
+                        Implemented selected puzzles with their respected mechanics and win conditions.
+                        <ul>
+                            <li>Potion Order Selection</li>
+                            <li>Basket Item Scale</li>
+                        </ul> 
+                    </li>
+                    <li>
+                        Created visuals to handle different effects, feedback for the player and overall aesthetic. 
+                        <ul>
+                            <li>Scene transitions</li>
+                            <li>Baked Lighting</li>
+                            <li>Particle Effects: Godray particles & Force Field Shield</li>
+                            <li>2D backgrounds and UI: made using Adobe Photoshop</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Delegating tasks to team members to ensure efficient workflow, tracking progress, and maintaining clear communication throughout the project. This included assigning specific tasks, setting deadlines, and providing support and guidance as needed.
+                    </li>
+                    <li>Researching and collecting assets for the game to fit the overall theme and style.</li>
+                </ul>
+
+                <hr>
+                <h3>Challenges</h3>
+                <p>One of the main challenges I encountered was working with the potion puzzle. The idea was to have the player select the correct options to be poured into the cauldron. However, I wasn't able to have different colors change based on the selected options. Rather than implementing this feature, I focused on ensuring the core mechanics were solid. Thus, a workaround was to simply play the pour animation, with the cauldron being opaque. It was also placed higher than the player so they wouldn't be able to look inside. </p>
+
+                <p>Another small challenge I encountered was overcomplicating the basket item scale puzzle. It originally consisted of checking the weight of the item to be placed on a basket and if it's the correct type. However, it didn't provide much use to have each items weight differently. Additionally, the basket was going to be idle. To make it easier to implement, I simplified the puzzle to only check if the item is the correct type. The basket would also be animated to move and down when an item is placed on it. And if there was an incorrect item, it'll dump the objects and return back to the original position. This provided a more dynamic and interactive experience for the player. </p>
+
+
+                <p>Overall, the main challenge was to ensure that the game was completed within the time frame. This required careful planning, prioritization of tasks, and effective communication among team members. By staying focused and organized, we were able to overcome these challenges and deliver the final product.</p>
+
+                <hr>
+                <h3>Results</h3>
+                <p>Overall, the game was completed within the time frame and met the required specifications. We did have some minor issues from players not passing certain puzzles or taking longer to solve. I enjoyed developing the game and playtesting it. My favorite part was creating a unique combination result for the potions puzzle. That way, each run was different rather than becoming predictable and repetitive. In the end, the game provided a fun and engaging experience for players and replayability to get the best ending.</p>
+
+                <p style="text-align: center;">Available for free on <a href="https://celestialqueen1.itch.io/the-lords-trials" target="_blank">Itch.io</a></p>
+
+                <hr>
+                <h3>Gallery</h3>
+                <div class="row flexCenterContainer"> <!--New row every x items in column-->
+                    <div class="column">
+                            <img src="../images/puzzles/potionV1.jpg" alt="A description of image">
+                    </div>
+                    <div class="column">
+                            <img src="../images/puzzles/potionV2.jpg" alt="A description of image">
+                    </div>
+                    <div class="column">
+                            <img src="../images/puzzles/potionV3.jpg" alt="A description of image">
+                    </div>
+                    <div class="column">
+                            <img src="../images/puzzles/potionV4.jpg" alt="A description of image">
+                    </div>
+                </div>
+
+                <div class="row flexCenterContainer">
+                    <div class="column">
+                            <img src="../images/puzzles/basketV1.jpg" alt="A description of image">
+                    </div>
+                    <div class="column">
+                            <img src="../images/puzzles/basketV2.jpg" alt="A description of image">
+                    </div>
+                    <div class="column">
+                            <img src="../images/puzzles/basketV3.jpg" alt="A description of image">
+                    </div>
+                </div>
+
+                <div class="row flexCenterContainer">
+                    <div class="column">
+                            <img src="../images/uiScripts/abstractBaseMenu.JPG" alt="A description of image">
+                    </div>
+                    <div class="column">
+                            <img src="../images/uiScripts/MainMenuClassExample.JPG" alt="A description of image">
+                    </div>
+                    <div class="column">
+                            <img src="../images/uiScripts/menuClassBase.JPG" alt="A description of image">
+                    </div>
+                </div>
+
+                <div class="row flexCenterContainer">
+                    <div class="column">
+                            <img src="../images/uiScripts/uiManager1.JPG" alt="A description of image">
+                    </div>
+                    <div class="column">
+                            <img src="../images/uiScripts/uiManager2.JPG" alt="A description of image">
+                    </div>
+                </div>
+
+                <div class="row flexCenterContainer">
+                    <div class="column">
+                            <img src="../images/theLordsTrialsUIGameplay.JPG" alt="A description of image">
+                    </div>
+                    <div class="column">
+                            <img src="../images/theLordsTrialsUIEndingExample.JPG" alt="A description of image">
+                    </div>
+                    
+                    <div class="column">
+                            <img src="../images/theLordsTrialsUIPauseMenu.JPG" alt="A description of image">
+                    </div>
+                    <div class="column">
+                            <img src="../images/theLordsTrialsUIQuitMenu.JPG" alt="A description of image">
+                    </div>
+                </div>
+
+                <div class="row flexCenterContainer">
+                    <div class="column">
+                            <img src="../images/theLordsTrialsUITitle.JPG" alt="A description of image">
+                    </div>
+                    <div class="column">
+                            <img src="../images/theLordsTrialsWorldUI2.JPG" alt="A description of image">
+                    </div>
+                    <div class="column">
+                            <img src="../images/theLordsTrialsWorldUI.JPG" alt="A description of image">
+                    </div>
+                    
+                    
+                </div>
+
+                
+                
             </div>
 
-            <div class="column positionSticky">
-                <button>Right</button>
+            <div class="column">
             </div>
-
         </div>
+
+         <div class="flexCenterContainer">
+                    <button> 
+                        <a href="../gamePortfolio.html">Home</a>
+                    </button>
+                    <button> 
+                        <a href="#top">Top</a>
+                    </button>
+                </div>
     </body>
 </html>
